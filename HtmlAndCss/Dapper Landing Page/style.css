@@ -4,12 +4,13 @@
    margin: 0;
    padding: 0;
    font-family: DM Sans;
+   box-sizing: border-box;
 }
 .navigation{
     background-color: #6F6AF7;
-    padding: 1.5vw;
+    padding: 2em;
     position: sticky;
-    top: 0px;
+    top: 0%;
 }
 
 nav{
@@ -18,7 +19,8 @@ nav{
     justify-content: center;
     align-items: center;
     color: #fff;
-    gap: 15vw;
+    gap: 15%;
+    
 
     
 
@@ -40,7 +42,7 @@ nav{
     width: 17px;
     height: 17px;
     right: 22vw;
-    top: 2.7vw;
+    top: 3.3em;
 
 }
 
@@ -62,8 +64,8 @@ ul:last-of-type::after {
     position: absolute;
     width: 17px;
     height: 17px;
-    right : 42vw;
-    top: 2.5vw;
+    right : 29em;
+    top: 2.5em;
    
 }
 
@@ -78,47 +80,60 @@ ul:last-of-type::after {
 
 .logo h1{
     font-family: Delius Unicase;
-    font-size: 2em;
+    font-size: 2rem;
     color: #fff;
 }
 
 
 /* Hero */
 .hero{
-    margin-top: 100px;
+    margin-top: 30px;
 }
 
 .hero-description{
+    margin-left: 5.5em;
     display: flex;
-    justify-content: end;
-    gap: 20px;
-    flex-basis: 1;
+    justify-content: start;
+    gap: 2em;
+    
+    
 
 }
 
 
 .hero-content{
     
-    width: 45vw;
-    height: 43vh;
+    width: 62%;
+    height: 54vh;
     border-radius: 20px;
     border: 6px solid #FFF;
     background: #E5D8FF;
     box-shadow: 3px 5px 27px 0px rgba(0, 0, 0, 0.25) inset;
     padding: 30px;
+    padding-left: 35px;
 }
 
 
+
+
+
 .hero-image img{
-    width: 30vw;
+    width: 27vw;
     height: 52vh;
     
 }
 
 .icons{
-    
+    margin-top: 110px;
+   float: right;
     display: flex;
     flex-direction: column;
+    align-items: end;
+    justify-content: flex-start;
+    height: 50px;
+    position: sticky;
+    top: 7.5em;
+   
     
    
   }
@@ -126,12 +141,116 @@ ul:last-of-type::after {
 
 .icons img {
     width: 50px;
+    /* height: 100px; */
+    
+   
 }
 
 
-.hero-description > .icons{
-    position: sticky;
+
+
+/* 
+ */
+
+
+.box{
+    margin-top: 2em;
+    display: flex;
+    /* justify-content: space-around; */
+    justify-content: center;
+    color: white;
+   gap: 2em;
+    
+}
+
+
+ .box div{
+
+    text-align: center;
+    width: 21%;
+    padding: 2.5em ;
+ }
+ .box1{
+border-radius: 11px;
+    background: #929DFF;
+    box-shadow: 0px 9px 31px 0px rgba(0, 0, 0, 0.40);
+ }
+ .box2{
+    border-radius: 11px;
+        background: #734CF2;
+        box-shadow: 0px 9px 31px 0px rgba(0, 0, 0, 0.40);
+
+ }
+ .box3{
+    border-radius: 11px;
+        background: #D288FF;
+        box-shadow: 0px 9px 31px 0px rgba(0, 0, 0, 0.40);
+ }
+ .box4{
+    border-radius: 11px;
+        background: #000;
+        box-shadow: 0px 9px 31px 0px rgba(0, 0, 0, 0.40);
+       
+ }
+
+ .customerSuppport{
+   
+    position: fixed;
+    top: 85%;
+    right: 4em;
+ }
+ .customerSuppport img{
+    height: 8em;
+ }
+
+
+
+
+ /*  */
+
+ .information-section{
+    padding: 0em 4em;
+ }
+.information{
+    margin-top: 10em;
+    border-radius: 21px;
+    background: #483EFF;
+    padding: 2em;
+}
+
+.information div{
+    padding: 2.5em 0em;
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.info{
+    border-radius: 22px;
+    background: #BCE0F6;
+    box-shadow: 0px 6px 35px 0px rgba(0, 0, 0, 0.39);
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.bookmarks{
+    border-radius: 22px;
+    border: 5px solid #FFF;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px;
 
 }
 
+.settings{
+    border-radius: 22px;
+    border: 5px solid #FFF;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
 
