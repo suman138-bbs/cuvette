@@ -5,6 +5,7 @@
    padding: 0;
    font-family: DM Sans;
    box-sizing: border-box;
+   
 }
 .navigation{
     background-color: #6F6AF7;
@@ -41,7 +42,7 @@ nav{
     position: absolute;
     width: 17px;
     height: 17px;
-    right: 22vw;
+    right: 18.7rem;
     top: 3.3em;
 
 }
@@ -64,7 +65,7 @@ ul:last-of-type::after {
     position: absolute;
     width: 17px;
     height: 17px;
-    right : 29em;
+    right : 35rem;
     top: 2.5em;
    
 }
@@ -209,22 +210,23 @@ border-radius: 11px;
  /*  */
 
  .information-section{
+    margin-top: 8em;
+    margin-bottom: 2em;
     padding: 0em 4em;
+  
+   
  }
-.information{
-    margin-top: 10em;
-    border-radius: 21px;
-    background: #483EFF;
-    padding: 2em;
-}
 
-.information div{
-    padding: 2.5em 0em;
-    width: 48%;
-    display: flex;
-    flex-direction: column;
-    gap: 2em;
-}
+ .information-txt{
+    width: 70%;
+    height: 26.9em;
+    border-radius: 19px;
+    background: #FFF;
+    padding: 3em;
+ }
+
+
+
 
 .info{
     border-radius: 22px;
@@ -254,3 +256,61 @@ border-radius: 11px;
     letter-spacing: 1px;
 }
 
+.user-info div{
+    padding: 2.5em 0em;
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.user-info {
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.information {
+    border-radius: 21px;
+    background: #483EFF;
+    padding: 2em;
+    height: 30em;
+    display: flex;
+    gap: 6em;
+
+}
+
+.info-header h1{
+     font-size: 2rem;
+     letter-spacing: 0.4rem;
+}
+
+.info-name{
+    margin-top: 2em;
+    padding-left: 2em;
+    color: #04285A;
+}
+
+
+.information-txt div{ 
+    color: #04285A;
+     margin-top: 1.7em;
+}
+.button{
+    position: absolute;
+    right: 10em;
+}
+
+.button  button {
+    padding: 1em 2.5em;
+    color: white;
+    border-radius: 9px;
+    background: #000;
+        
+}
+
+.button button img {
+    position: relative;
+    top: 3px;
+}
