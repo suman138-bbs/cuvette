@@ -1,0 +1,74 @@
+*{
+    font-family: Inter;
+    padding: 0px;
+    margin: 0px;
+}
+
+header{
+   padding: 0em 6em;
+   background-color: #FFCD9E;
+   display: flex;
+   gap: 2em;
+}
+
+header div:first-child{
+    padding-top: 2em;
+}
+
+
+.description p{
+    margin-top: 1.2em;
+    width: 25em;
+
+}
+
+
+.description h3 {
+    margin-top: 1.2em;
+
+}
+
+
+.e-button{
+    margin-top: 1.2em;
+}
+
+.e-button input{
+    padding-left: 1em;
+    border-radius: 8px;
+    border: 4px solid #000;
+    background: #FFF;
+    height: 3em;
+    width: 20em;
+}
+
+.e-button button{
+    border-radius: 8px;
+        background: #282828;
+        color: #FFF;
+        padding: 1em 1.7em;
+}
+
+.m-image img{
+      /* height: 20em; */
+      width: 25em;
+}
+
+/*  */
+
+
+footer{
+    padding: 3em;
+    background: #282828;
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    gap: 45em;
+}
+
+footer div ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap:0.5em;
+}
