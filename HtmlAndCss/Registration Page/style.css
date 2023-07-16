@@ -49,6 +49,14 @@ header div:first-child{
         padding: 1em 1.7em;
 }
 
+
+.e-button :last-child{
+    color: #FFF;
+    font-size: 14px;
+    margin-left: 1em;
+    margin-top: 1em;
+}
+
 .m-image img{
       /* height: 20em; */
       width: 25em;
