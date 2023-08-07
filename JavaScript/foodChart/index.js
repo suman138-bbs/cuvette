@@ -353,9 +353,14 @@ function listFoodItemsByCarbohydrates(data) {
 }
 
 // Task results
-console.log("Task 1: All Food Items:", listAllFoodItems(foodData));
-console.log("Task 2: Vegetables:", listFoodItemsByCategory(foodData, "Vegetable"));
-console.log("Task 3: Food Items with Calorie above 100:", listFoodItemsAboveCalorie(foodData, 100));
-console.log("Task 4: Food Items with Calorie below 100:", listFoodItemsBelowCalorie(foodData, 100));
-console.log("Task 5: Protein Content (highest to lowest):", listFoodItemsByProtein(foodData));
-console.log("Task 6: Carbohydrate Content (lowest to highest):", listFoodItemsByCarbohydrates(foodData));
+console.log("All Food Items:", listAllFoodItems(foodData));
+console.log("Vegetables:", listFoodItemsByCategory(foodData, "vegetable"));
+console.log("Fruits:", listFoodItemsByCategory(foodData, "fruit"));
+console.log("Proteins:", listFoodItemsByCategory(foodData, "protein"));
+console.log("Nuts:", listFoodItemsByCategory(foodData, "nuts"));
+console.log("Grains:", listFoodItemsByCategory(foodData, "grain"));
+console.log("Dairy:", listFoodItemsByCategory(foodData, "dairy"));
+console.log("Calorie above 100:", listFoodItemsByCalorie(foodData, 100, true));
+console.log("Calorie below 100:", listFoodItemsByCalorie(foodData, 100, false));
+console.log("Protein content (highest to lowest):", listFoodItemsByProtein(foodData));
+console.log("Carbohydrate content (lowest to highest):", listFoodItemsByCarbohydrates(foodData));
