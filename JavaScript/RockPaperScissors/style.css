@@ -10,6 +10,7 @@
 }
 
 body{
+    
     background-color: #8CC461;
     width: 100%;
     flex-direction: column;
@@ -67,34 +68,45 @@ header > h1{
 .oneeighty{
     background-color: #000000;
     height: 0.5rem;
-    width: 8rem;
-    margin-top:10%;
+    width: 10rem;
+    margin-top:8%;
     border: none;
+    margin: 12% 0% 0% -13%;
+    
 
 }
 
 .oneTwenty {
     background-color: #000000;
     height: 0.5rem;
-    width: 8rem;
+    width: 11.5rem;
     margin-top: 15%;
     border: none;
-    rotate: 50deg;
+    rotate: 60deg;
+    position: relative;
+    top: -2.2rem;
+    left: 6rem;
+    z-index: -1;
 
 }
 
 .seventy{
     background-color: #000000;
         height: 0.5rem;
-        width: 8rem;
+        width: 10.7rem;
         /* margin-top: 1%; */
         border: none;
         rotate: 120deg;
+        position: relative;
+        top: -14rem;
+        left: 17rem;
+        z-index: -1;
+       
 }
 
 main{
 
-    margin-top: 5%;
+    margin-top: 2%;
     display: flex;
     justify-content: center;
 
@@ -103,10 +115,20 @@ main{
 .rock-scissors-container{
     display: flex;
     justify-content: center;
+    
    
+
 
 }
 
+.rock-container{
+    /* width: 10rem; */
+    /* margin-left: -1rem; */
+    
+}
+.scissors-container{
+    margin-left: -0.8rem;
+}
 .paper-container{
     display:flex;
     justify-content: center;
@@ -115,6 +137,7 @@ main{
 .icon-btn{
     background: transparent;
     border: none;
+    cursor: pointer;
 
 }
 
@@ -124,10 +147,66 @@ main{
     
 }
 
-.firstPng,.secondPng{
-    top: -35%;
+.firstPng,.secondPng,.thirdPng{
+    top:-4rem ;
     right: 45%;  
 }
+
+
+
+
+/* Rule button */
+.rule-btn{
+    cursor: pointer;
+    padding: 0.5em 2em;
+    border:2px solid #fff;
+    background: transparent;
+    border-radius: 0.2rem;
+    color: #fff;
+    font-size: 15px;
+    position: fixed;
+    top: 36rem;
+    right: 5%;
+    letter-spacing: 0.3rem;
+
+}
+
+.rule-container{
+    background-color: #004429;;
+    max-width: 30%;
+    padding: 0.5em 1.5em;
+    border: 0.4em solid #fff;
+    position: absolute;
+    z-index: 5;
+    top: 13rem;
+    right:2%;
+    border-radius: 1em;
+    color: #fff;
+   
+}
+
+.rule-container > h1{
+    text-align: center;
+}
+
+.cross-btn{
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    position: relative;
+    /* left: 2em;
+    top: -2em; */
+}
+.cross-btn >span{
+    color: #fff;
+    font-size: 2rem;
+    position: absolute;
+    
+}
+
+
+
+
 
 @media screen and (max-width:1000px) {
     header{
@@ -137,7 +216,7 @@ main{
         position: relative;
         width: 15%;
         top: -1rem;
-        right: 2.3rem;
+        right: 2.2rem;
 
     }
     .oneeighty {
@@ -145,6 +224,27 @@ main{
         height: 0.2rem;
         width: 8rem;
     }
+
+        .oneTwenty {
+            margin: 2% -3% 0% 0%;
+            height: 0.2rem;
+            width: 6rem;
+            top: 1rem;
+            left: 12rem;
+            rotate: 53deg;
+        }
+
+        
+    
+        .seventy {
+            margin: 2% -3% 0% 0%;
+            height: 0.2rem;
+            width: 6rem;
+            position: relative;
+            top: -5rem;
+            rotate: 122deg;
+            left: 16rem;
+        }
 
     .rockSvg,
     .scissorsSvg,
@@ -157,9 +257,17 @@ main{
         width: 20%;
 
     }
+    .paper{
+
+        width: 20%;
+    }
+    
 
     .rock-container {
         margin-right: -9%;
+    }
+    .paper-container{
+        margin-top: 2rem;
     }
 
 }
@@ -172,26 +280,98 @@ main{
     .iconPng {
         position: relative;
         width: 15%;
-        top: -0.3rem;
-        right: 0.80rem;
+        top: -0.5rem;
+        right: 1.3rem;
 
     }
     .oneeighty{
         margin: 2% -3% 0% 0%;
         height: 0.01rem;
-        width: 5rem;
+        width: 4rem;
+        z-index: -1;
+    }
+
+    .oneTwenty {
+        margin: 2% -3% 0% 0%;
+        height: 0.01rem;
+        width: 4rem;
+        top:-0.5rem;
+        rotate: 55deg;
+
+    }
+        .seventy {
+        margin: 2% -3% 0% 0%;
+        height: 0.01rem;
+        width: 4rem;
+        rotate: 124deg;
+        top: -3rem;
+        left: 14.3rem;
     }
     
     .rockSvg,.scissorsSvg,.paperSvg{
         width: 40%;
     }
    .rock-container,.scissors-container{
-    width: 10%;
+    width: 13%;
+
 
    }
    .rock-container{
-    margin-right: -4.5%;
+    margin-right: -6%;
    }
-
+   .paper{
+    width: 13%;
+   }
+   .paper-container {
+       margin-top: 1rem;
+   }
     
+}
+
+@media screen and (max-width:425px) {
+    .iconPng {
+            position: relative;
+            width: 15%;
+            top: -0.5rem;
+            right: 1rem;
+    
+        }
+
+        
+}
+
+
+@media screen and (max-width:500px) {
+    .oneTwenty {
+        margin: 2% -3% 0% 0%;
+            height: 0.01rem;
+            width: 4rem;
+            top: 0%;
+            rotate: 55deg;
+            left: 37.5%;
+    }
+    .seventy{
+        left: 45%;
+    }
+
+
+}
+
+@media screen and (max-width:360px) {
+    .oneTwenty {
+        margin: 2% -3% 0% 0%;
+        height: 0.01rem;
+        width: 4rem;
+        top: 0%;
+        rotate: 55deg;
+        left: 35%;
+    }
+
+    .seventy {
+        top: -2.5rem;
+        left: 45%;
+        width: 3.5rem;
+    }
+
+
 }
