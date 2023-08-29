@@ -14,7 +14,7 @@ body{
     background-color: #8CC461;
     width: 100%;
     flex-direction: column;
-    
+    overflow: hidden;
 }
 
 .header-container{
@@ -106,7 +106,7 @@ header > h1{
 
 main{
 
-    margin-top: 2%;
+    margin-top: 0%;
     display: flex;
     justify-content: center;
 
@@ -165,15 +165,19 @@ main{
     color: #fff;
     font-size: 15px;
     position: fixed;
-    top: 36rem;
-    right: 5%;
+    top: 35rem;
+    right: 15%;
     letter-spacing: 0.3rem;
 
+}
+/* NEXT BUTTON */
+.next-btn{
+    right: 2%;
 }
 
 .rule-container{
     background-color: #004429;;
-    max-width: 30%;
+    max-width: 17em;
     padding: 0.5em 1.5em;
     border: 0.4em solid #fff;
     position: absolute;
@@ -184,6 +188,23 @@ main{
     color: #fff;
    
 }
+
+.rule-container ul{
+    margin-top: -3rem;
+    list-style-type: none;
+    
+}
+
+ ul li::before {
+     content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    margin-right: -10px;
+    position: relative;
+    right: 1rem;
+ }
 
 .rule-container > h1{
     text-align: center;
@@ -196,11 +217,16 @@ main{
     position: relative;
     /* left: 2em;
     top: -2em; */
+    left: 89%;
+    top: -4rem;
+    
 }
 .cross-btn >span{
     color: #fff;
     font-size: 2rem;
-    position: absolute;
+    position: relative;
+    top: -0.5rem;
+    left: 1.9rem;
     
 }
 
@@ -357,12 +383,12 @@ main{
 
 }
 
-@media screen and (max-width:360px) {
+@media screen and (max-width:370px) {
     .oneTwenty {
         margin: 2% -3% 0% 0%;
         height: 0.01rem;
-        width: 4rem;
-        top: 0%;
+        width: 3.5rem;
+        top: 1%;
         rotate: 55deg;
         left: 35%;
     }
