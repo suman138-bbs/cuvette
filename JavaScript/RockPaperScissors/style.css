@@ -106,7 +106,7 @@ header > h1{
 
 main{
 
-    margin-top: 0%;
+    margin-top: 1%;
     display: flex;
     justify-content: center;
 
@@ -132,6 +132,7 @@ main{
 .paper-container{
     display:flex;
     justify-content: center;
+   
 }
 
 .icon-btn{
@@ -163,7 +164,7 @@ main{
     background: transparent;
     border-radius: 0.2rem;
     color: #fff;
-    font-size: 15px;
+    font-size: 0.9rem;
     position: fixed;
     top: 35rem;
     right: 15%;
@@ -215,10 +216,8 @@ main{
     background: transparent;
     border: none;
     position: relative;
-    /* left: 2em;
-    top: -2em; */
     left: 89%;
-    top: -4rem;
+    top: -4rem; 
     
 }
 .cross-btn >span{
@@ -230,12 +229,109 @@ main{
     
 }
 
+.result-container{
+    margin-top: 4em;
+    display: flex;
+    gap: 2%;
+    color: #fff;
+
+}
+ 
+.user-picked-container{
+    text-align: center;
+    height: 17em;
+    width: 17em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+} 
+.msg-container h1,h4{
+    margin-bottom: 4px;
+}
+.pc-picked-container {
+    text-align: center;
+    height: 17em;
+    width: 17em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.user-picked-images img:last-child{
+      position: relative;
+      width: 3em;
+    right: -0.3em;
+        top: -7em;
+
+}
+.replay-btn{
+    border: none;
+    background-color: #fff;
+    padding: 1em 2em;
+    border-radius: 5px;
+    color: #6B6B6B;
+    font-weight: 600;
+    width: 10em;
+}
+
+.msg-container{
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        letter-spacing: 3px;
+    
+}
+
+
+.pc-picked-images img:last-child {
+    position: relative;
+    width: 3em;
+        right: -0.3em;
+            top: -7em;
+
+} 
+
+.user-picked-images{
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; 
+    
+}
+
+.pc-picked-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+
+ #animation{
+    background-color: #2E9A2563;
+}
+
+.msg-container{
+    text-align: center;
+}  
 
 
 
 
 @media screen and (max-width:1000px) {
     header{
+        font-size: 0.5rem;
+    }
+    header .score-header div p{
         font-size: 0.5rem;
     }
     .iconPng {
@@ -291,10 +387,67 @@ main{
 
     .rock-container {
         margin-right: -9%;
+        
+        
     }
     .paper-container{
         margin-top: 2rem;
     }
+    .rule-container{
+        font-size: 0.5rem;
+        top: 9rem;
+        right:11%;
+        max-width:25% ;
+    }
+        .rule-container>h1 {
+            font-size: 0.5rem;
+        }
+    .rule-btn{
+        font-size: 0.8rem;
+        top: 19.7rem;
+        right: 20%;
+        padding: 0.2em 0.7em;
+    }
+        .rule-container ul {
+            margin-top: -1rem;
+            list-style-type: none;
+    
+        }
+
+    ul li::before {
+        content: "";
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        background-color: #fff;
+        margin-right: -6px;
+        position: relative;
+        right: 0.6rem;
+    }
+
+        .cross-btn {
+            cursor: pointer;
+            background: transparent;
+            border: none;
+            position: relative;
+            
+            left: 91%;
+            top: -1.7rem;
+    
+        }
+
+        .cross-btn img{
+            width: 40%;
+        }
+
+        .cross-btn span{
+            font-size: small;
+            top: -0.4rem;
+                left: 0.8rem;
+
+        }
+
+    
 
 }
 
@@ -303,10 +456,14 @@ main{
         font-size: 0.3rem;
         
     }
+    header.score-header div  .pc-score {
+    font-size: small;
+    
+}
     .iconPng {
         position: relative;
-        width: 15%;
-        top: -0.5rem;
+        width: 12%;
+        top: -0.7rem;
         right: 1.3rem;
 
     }
@@ -335,7 +492,7 @@ main{
     }
     
     .rockSvg,.scissorsSvg,.paperSvg{
-        width: 40%;
+        width: 46%;
     }
    .rock-container,.scissors-container{
     width: 13%;
@@ -348,9 +505,56 @@ main{
    .paper{
     width: 13%;
    }
+
    .paper-container {
        margin-top: 1rem;
    }
+   .rule-container>h1 {
+       font-size: 0.3rem;
+   }
+   .rule-container{
+    font-size: 0.3rem;
+    top: 7rem;
+    max-width: 23%;
+   }
+   .rule-btn {
+       border-width: 0.5px;
+       border-radius: 2px;
+       font-size: 0.2rem;
+       top: 13rem;
+       right: 27%;
+        padding: 0.2em 0.1em 0.2em 1.3em;
+   }
+   .rule-container ul {
+       margin-top: -1rem;
+      
+
+   }
+    ul li::before {
+        content: "";
+        display: inline-block;
+        width: 2px;
+        height: 2px;
+        background-color: #fff;
+        margin-right: -2px;
+        position: relative;
+        right: 0.2rem;
+    }
+    .cross-btn{
+        top: -1rem;
+        left: 80%;
+    }
+         .cross-btn img {
+             width: 30%;
+         }
+    
+         .cross-btn span {
+             font-size: x-small;
+             top: -0.2rem;
+             left: 0.6rem;
+    
+         }
+
     
 }
 
@@ -361,6 +565,10 @@ main{
             top: -0.5rem;
             right: 1rem;
     
+        }
+        .cross-btn {
+            top: -1rem;
+            left: 76%;
         }
 
         
@@ -383,7 +591,7 @@ main{
 
 }
 
-@media screen and (max-width:370px) {
+@media screen and (max-width:375px) {
     .oneTwenty {
         margin: 2% -3% 0% 0%;
         height: 0.01rem;

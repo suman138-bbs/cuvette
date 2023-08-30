@@ -60,7 +60,8 @@ ruleList.appendChild(li4)
 ruleContainer.prepend(ruleHeader)
 ruleContainer.appendChild(ruleList)
  mainRuleContainer.prepend(ruleContainer)   
-    }
+  }
+  
   let crossBtn = document.querySelector('.cross-btn');  
 function removeRule() {
     
@@ -77,6 +78,7 @@ ruleBtn.addEventListener('click', () => {
     
     createRule()
 })
+  console.log(mainRuleContainer)
 
 /**
  * Game Play Section
@@ -148,8 +150,8 @@ function setDecision(message, btnMessage, prop) {
    */
   let msgDiv = document.createElement('div');
    msgDiv.classList="msg-container"
-  let msgHeader = document.createElement('h1');
-  let againstPc = document.createElement('h2');
+  let msgHeader = document.createElement('h2');
+  let againstPc = document.createElement('h4');
   let replyButton = document.createElement('button')
   againstPc.innerText = "AGAINST PC"
   if(message!="TIE UP")
@@ -181,7 +183,8 @@ function setDecision(message, btnMessage, prop) {
      * Computer Picked
      */
   let pcPickedContainer = document.createElement('div');
-   pcPickedContainer.classList="pc-picked-container"
+  pcPickedContainer.classList = "pc-picked-container"
+  // let pcShadowDiv = document.createElement('div')
   let pcPickedImages = document.createElement('div')
   pcPickedImages.classList="pc-picked-images"
     let cpicked = document.createElement('h3');
@@ -207,22 +210,21 @@ function setDecision(message, btnMessage, prop) {
     mainRuleContainer.appendChild(nextBtn)
     // console.log(nextBtn)
     userPickedContainer.setAttribute('id',"animation")
-    userPickedContainer.style.backgroundColor = "#2E9A2563"
+    // userPickedContainer.style.backgroundColor = "#2E9A2563"
     
   }
   if (message == "YOU LOST") {
   
     
     pcPickedContainer.setAttribute('id',"animation")
-    pcPickedContainer.style.backgroundColor="#2E9A2563"
+    // pcPickedContainer.style.backgroundColor="#2E9A2563"
   }
 
  
 
   let resultConatiner = document.createElement('div');
   resultConatiner.classList = "result-container"
-  resultConatiner.style.display = 'flex'
-  resultConatiner.style.gap='2rem'
+  
   resultConatiner.prepend(userPickedContainer)
   resultConatiner.appendChild(msgDiv)
   resultConatiner.appendChild(pcPickedContainer)
