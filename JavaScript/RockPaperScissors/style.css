@@ -13,7 +13,7 @@ body{
     
     background-color: #8CC461;
     width: 100%;
-    flex-direction: column;
+    
     overflow: hidden;
 }
 
@@ -121,11 +121,7 @@ main{
 
 }
 
-.rock-container{
-    /* width: 10rem; */
-    /* margin-left: -1rem; */
-    
-}
+
 .scissors-container{
     margin-left: -0.8rem;
 }
@@ -230,22 +226,22 @@ main{
 }
 
 .result-container{
-    margin-top: 4em;
+    margin-top: 2em;
     display: flex;
-    gap: 2%;
     color: #fff;
 
 }
  
 .user-picked-container{
     text-align: center;
-    height: 17em;
-    width: 17em;
+    width: 18em;
+        height: 18em;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    /* padding-top: 2em; */
 
 
 } 
@@ -254,15 +250,17 @@ main{
 }
 .pc-picked-container {
     text-align: center;
-    height: 17em;
-    width: 17em;
+    width: 18em;
+        height: 18em;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    
 
 }
+
 
 .user-picked-images img:last-child{
       position: relative;
@@ -272,6 +270,7 @@ main{
 
 }
 .replay-btn{
+    cursor: pointer;
     border: none;
     background-color: #fff;
     padding: 1em 2em;
@@ -306,6 +305,12 @@ main{
         flex-direction: column; 
     
 }
+.user-picked-images img:first-child{
+       width: 10em;
+}
+.pc-picked-images img:first-child{
+    width: 10em;
+}
 
 .pc-picked-images {
     display: flex;
@@ -318,7 +323,25 @@ main{
 
  #animation{
     background-color: #2E9A2563;
+   
+   
+    border-radius: 50%; 
+
 }
+#animation h3{
+    margin-top: -2em;
+    margin-bottom: 1em;
+    z-index: 4;
+}
+ #animation div{
+    padding-top: 3.5em;
+    height: 14em;
+    width: 14em;
+    background-color: #289A27;
+    box-shadow: 0em 0em 1em 1em #32A62F ;
+    border-radius: 50%;
+ }
+
 
 .msg-container{
     text-align: center;
@@ -396,15 +419,15 @@ main{
     .rule-container{
         font-size: 0.5rem;
         top: 9rem;
-        right:11%;
+        right:10%;
         max-width:25% ;
     }
         .rule-container>h1 {
             font-size: 0.5rem;
         }
     .rule-btn{
-        font-size: 0.8rem;
-        top: 19.7rem;
+        font-size: 0.5rem;
+        top: 19rem;
         right: 20%;
         padding: 0.2em 0.7em;
     }
@@ -446,6 +469,31 @@ main{
                 left: 0.8rem;
 
         }
+    .result-container {
+        /* margin-top: 2em; */
+        display: flex;
+        color: #fff;
+        font-size: 0.4rem;
+
+    }
+
+    .replay-btn{
+        padding: 0.5em 1em;
+        width: auto;
+        font-weight: 600;
+        font-size: 0.5rem;
+        border-radius: 0.1rem;
+    }
+
+    .next-btn{
+    font-size: 0.5rem;
+        top: 19rem;
+        right: 10%;
+        padding: 0.2em 0.7em;
+    
+    }
+
+
 
     
 
@@ -454,6 +502,8 @@ main{
 @media screen and (max-width:600px) {
     header {
         font-size: 0.3rem;
+        padding: 2em;
+        border-radius: 0.5rem;
         
     }
     header.score-header div  .pc-score {
@@ -522,7 +572,7 @@ main{
        border-radius: 2px;
        font-size: 0.2rem;
        top: 13rem;
-       right: 27%;
+       right: 28%;
         padding: 0.2em 0.1em 0.2em 1.3em;
    }
    .rule-container ul {
@@ -554,7 +604,31 @@ main{
              left: 0.6rem;
     
          }
+ .rule-container {
+     
+     
+     right: 15%;
+     
+ }
+ .result-container{
+    font-size: 0.2rem;
+ }
+ .replay-btn {
+     padding: 0.3em 0.7em;
+     width: auto;
+     font-weight: 600;
+     font-size: 0.3rem;
+ }
 
+ .next-btn {
+   right: 18%;
+
+ }
+
+ .msg-container h2,h4{
+    letter-spacing: 1px;
+ }
+ 
     
 }
 

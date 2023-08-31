@@ -22,7 +22,7 @@ let pcScoreInt = parseInt(localStorage.getItem('pcScore'));
     pcScore.innerText = pcScoreInt;
 
     
-  let ruleBtn = document.querySelector('.rule-btn')
+let ruleBtn = document.querySelector('.rule-btn')
 let mainRuleContainer = document.querySelector('.main-rule-container') 
 
 
@@ -70,12 +70,12 @@ function removeRule() {
 }
 
 crossBtn.addEventListener('click', () => {
-    removeRule()
+  removeRule()
+  
 })
 }
 
 ruleBtn.addEventListener('click', () => {
-    
     createRule()
 })
   console.log(mainRuleContainer)
@@ -184,8 +184,7 @@ function setDecision(message, btnMessage, prop) {
      */
   let pcPickedContainer = document.createElement('div');
   pcPickedContainer.classList = "pc-picked-container"
-  // let pcShadowDiv = document.createElement('div')
-  let pcPickedImages = document.createElement('div')
+   let pcPickedImages = document.createElement('div')
   pcPickedImages.classList="pc-picked-images"
     let cpicked = document.createElement('h3');
     cpicked.innerText="PC PICKED"
@@ -204,6 +203,9 @@ function setDecision(message, btnMessage, prop) {
   if (message === "YOU WIN") {
     
     let nextBtn = document.createElement('button');
+     nextBtn.addEventListener('click', () => {
+      window.open("hurray.html","_self");
+    })
     nextBtn.classList = 'next-btn rule-btn ';
     // nextBtn.classList='rule-btn'
     nextBtn.innerText = "NEXT"
@@ -232,6 +234,7 @@ function setDecision(message, btnMessage, prop) {
   console.log(resultConatiner)
   function gameUI() {
     let nextBtn = document.querySelector('.next-btn')
+   
       if (nextBtn) {
        mainRuleContainer.removeChild(nextBtn)
   
