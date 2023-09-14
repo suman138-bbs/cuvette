@@ -2,3 +2,17 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   
 }
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.body-container{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url(<path-to-image>), lightgray 50% / cover no-repeat;
+ 
+}
+
