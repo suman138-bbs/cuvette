@@ -1,7 +1,7 @@
 import React from 'react'
 // import Card from './components/Card/Card.component';
 // import Form from './components/Form/Form.component';
-
+import Form from './components/Form/Form.component'
 import GradientSvg from './assets/gradientbg.svg'
 import Ellipse1 from './assets/Ellipse1.png'
 import Ellipse2 from './assets/Ellipse2.png'
@@ -33,7 +33,9 @@ const App = () => {
               <p>233</p>
             </article>
           </div>
-          <div>Form</div>
+          <div>
+            <Form/>
+          </div>
         </div>
         
       </section>
