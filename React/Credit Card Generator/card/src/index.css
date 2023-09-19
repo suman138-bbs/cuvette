@@ -15,9 +15,7 @@ body{
 .card-from-container{
   height: 100vh;
   display: flex;
-  gap: 20em;
-  
-  
+  gap: 20em;  
 }
 
 .gradient-bg-container{
@@ -67,23 +65,26 @@ body{
 }
 
 .card-number{
-      letter-spacing: 6px;
-        font-size: 24px;
+      letter-spacing: 3px;
+        font-size: 1.4rem;
 
 }
 .card-detal{
   position: relative;
-  /* left: 2em; */
   top: 2em;
 
 }
 .card-detal ul{
   margin-top: 3em;
   list-style: none;
-     display: flex;
-     gap: 12em;
+  display: flex;
+  gap: 11em;
 }
 
+
+ul li {
+  font-size: 1rem;
+}
 
 
 
@@ -114,5 +115,3 @@ body{
 }
 
 
-
-/* From Section */
