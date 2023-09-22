@@ -29,7 +29,7 @@ const Form = ({ getCardDetail }) => {
           ? ''
           : 'Invalid card number',
       expiry:
-        /^(0[1-9]|1[0-2])$/.test(val.month) && /^\d{2}$/.test(val.year) && parseInt(val.year, 10) >= currentYear
+        /^\d{2}$/.test(val.year) && parseInt(val.year, 10) >= currentYear
           ? ''
           : 'Invalid expiry date',
       cvc: /^\d{3}$/.test(val.cvc) ? '' : 'Invalid CVC',
