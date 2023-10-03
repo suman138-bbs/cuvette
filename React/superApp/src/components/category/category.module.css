@@ -1,0 +1,46 @@
+.categoryContainer{
+    color: #fff;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) ;
+    gap: 1em;
+    
+   
+
+}
+
+.categoryContainer >div{
+    padding: 0.5em;
+    font-family: DM Sans;
+    border-radius: 0.5em;
+    height: 100%;
+    /* border: 1px solid #fff; */
+}
+
+.movieName{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    
+    
+    
+}
+
+.movieName >p {
+    padding-left: 0.3em;
+}
+.movieName  {
+
+}
+
+.movieName >div >img{
+   width: auto;
+    height: 5em;
+}
+
+.MaincategoryContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+

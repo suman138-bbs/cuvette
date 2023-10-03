@@ -1,0 +1,48 @@
+.categoriesContainer{
+    background-color: #000;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    
+}
+
+.selectedCate{
+    
+    height: 100vh;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5em;
+    
+   
+}
+
+.selectedCate >div >div{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.heading {
+    font-family: Single Day;
+    color: #72DB73;
+    
+}
+.headline{
+    color: #fff;
+    font-family: Roboto;
+    font-size: 4rem;
+    font-weight: bolder;
+    line-height: 1.1;
+    width: 80%;
+
+}
+.categoryList{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 100vh;
+     
+
+}

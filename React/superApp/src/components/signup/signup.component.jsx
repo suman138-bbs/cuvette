@@ -46,7 +46,7 @@ const Signup = () => {
       localStorage.setItem("formData", data);
 
       console.log(JSON.parse(localStorage.getItem("formData")));
-      navigate("/dashbord");
+      navigate("/categories");
     }
   };
 
