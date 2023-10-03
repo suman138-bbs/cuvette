@@ -28,6 +28,7 @@ input{
     width: 30em;
     padding: 1em 1.5em;
     border: none;
+    color: #fff;
 }
 
 .heading{
@@ -60,6 +61,11 @@ form{
     width: 1em;
         height: 1em;
 }
+.checkBox p{
+    position: relative;
+     right: 36em;
+     top: 2em
+}
 
 .termsAndCondition{
     width: 25em;
@@ -72,6 +78,7 @@ form{
     padding: 1em 5em;
     width: 30em;
     border-radius: 2em;
+    cursor: pointer;
 
 }
 
@@ -85,3 +92,7 @@ form{
     gap: 1em;
 }
 
+.error{
+    color: red;
+    font-size: 0.6rem;
+}
