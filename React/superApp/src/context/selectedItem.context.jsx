@@ -5,9 +5,6 @@ const addItem = (selectedItem, ItemTOAdd) => {
     return ele.id === ItemTOAdd.id;
   });
 
-  console.log("Selected Item", selectedItem);
-  console.log("Item to add", ItemTOAdd);
-  console.log("Exsist", exist);
   if (!exist) {
     return [...selectedItem, ItemTOAdd];
   } else {
@@ -15,8 +12,16 @@ const addItem = (selectedItem, ItemTOAdd) => {
   }
 };
 
+const removeSelectedItem = (selectedItem, itemToRemove) => {
+  const items = selectedItem.filter((category) => {
+    return category.id !== itemToRemove.id;
+  });
+  return [...items];
+};
+
 export const selectedContext = createContext({
   selectedItem: [],
+  isSelect: false,
 });
 
 export const SelectedProvider = ({ children }) => {
@@ -25,7 +30,10 @@ export const SelectedProvider = ({ children }) => {
   const handleAdd = (item) => {
     setSelectedItem(addItem(selectedItem, item));
   };
-  const value = { selectedItem, handleAdd };
+  const handleRemove = (item) => {
+    setSelectedItem(removeSelectedItem(selectedItem, item));
+  };
+  const value = { selectedItem, handleAdd, handleRemove };
 
   return (
     <selectedContext.Provider value={value}>

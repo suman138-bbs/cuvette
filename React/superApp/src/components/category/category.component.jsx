@@ -1,4 +1,4 @@
-import React, { useContext } from "react"; // Import useContext from React
+import React, { useContext, useState } from "react"; // Import useContext from React
 import { CategoriesContext } from "../../context/categories.context";
 import { selectedContext } from "../../context/selectedItem.context";
 import style from "./category.module.css";
@@ -11,10 +11,10 @@ import Horror from "../../assets/horror.png";
 import Music from "../../assets/music.png";
 import Thriller from "../../assets/thriller.png";
 import Westren from "../../assets/western.png";
-const Category = () => {
-  const { categoriesList } = useContext(CategoriesContext);
+const Category = ({ handleNextPage }) => {
+  const { categoriesList, setNewCategoryItem } = useContext(CategoriesContext);
   const { handleAdd } = useContext(selectedContext);
-  console.log(categoriesList);
+
   const getBackGround = (category) => {
     switch (category) {
       case "Action":
@@ -43,17 +43,26 @@ const Category = () => {
   const handleSelect = (list) => {
     handleAdd(list);
   };
+
+  const setNewCategory = (category) => {
+    setNewCategoryItem(category);
+  };
+
   return (
-    <div>
+    <div className={style.categoryAndBtn}>
       <div className={style.categoryContainer}>
         {categoriesList.map((category) => {
           return (
             <div
               key={category.id}
-              style={{ backgroundColor: getBackGround(category.name).bgColor }}
+              style={{
+                backgroundColor: getBackGround(category.name).bgColor,
+              }}
               onClick={() => {
+                setNewCategory(category);
                 handleSelect(category);
               }}
+              className={category.flag ? style.setBorder : ""}
             >
               <div className={style.movieName}>
                 <p>{category.name}</p>
@@ -64,6 +73,15 @@ const Category = () => {
             </div>
           );
         })}
+      </div>
+      <div className={style.nextBtn}>
+        <button
+          onClick={() => {
+            handleNextPage();
+          }}
+        >
+          Next Page
+        </button>
       </div>
     </div>
   );
