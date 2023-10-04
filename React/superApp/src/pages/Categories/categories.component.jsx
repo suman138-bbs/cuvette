@@ -5,12 +5,12 @@ import { useContext } from "react";
 import { selectedContext } from "../../context/selectedItem.context";
 const Categories = () => {
   const { selectedItem } = useContext(selectedContext);
-
+  console.log("Hello", selectedItem);
   return (
     <div className={style.categoriesContainer}>
       <div className={style.selectedCate}>
         <div>
-          <div>
+          <div className={style.selectedCatHeadline}>
             <div>
               <h1 className={style.heading}>Super app</h1>
             </div>
@@ -20,7 +20,16 @@ const Categories = () => {
               </p>
             </div>
           </div>
-          <div style={{ color: "white" }}>"list"</div>
+          <div className={style.selectedItem}>
+            {selectedItem.map((category) => {
+              return (
+                <div>
+                  <p>{category.name}</p>
+                  <button>X</button>
+                </div>
+              );
+            })}
+          </div>
           <div style={{ color: "white" }}>"error"</div>
         </div>
       </div>

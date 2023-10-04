@@ -18,7 +18,7 @@
    
 }
 
-.selectedCate >div >div{
+.selectedCatHeadline{
     display: flex;
     flex-direction: column;
     gap: 1em;
@@ -45,4 +45,33 @@
     height: 100vh;
      
 
+}
+
+.selectedItem{
+    width: 80%;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    
+}
+
+.selectedCate >div{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.selectedItem >div{
+    padding: 0.4em;
+    font-family: Roboto;
+    background-color: #148A08;
+    display: flex;
+    gap: 1.7em;
+    border-radius: 0.9em;
+}
+.selectedItem button{
+    background: none;
+    border: none;
+    cursor: pointer;
 }

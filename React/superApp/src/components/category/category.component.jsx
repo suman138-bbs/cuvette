@@ -1,33 +1,47 @@
 import React, { useContext } from "react"; // Import useContext from React
 import { CategoriesContext } from "../../context/categories.context";
+import { selectedContext } from "../../context/selectedItem.context";
 import style from "./category.module.css";
 import Action from "../../assets/action.png";
+import Romance from "../../assets/romance.png";
+import Drama from "../../assets/drama.png";
+import Fantasy from "../../assets/fantasy.png";
+import Fiction from "../../assets/fiction.png";
+import Horror from "../../assets/horror.png";
+import Music from "../../assets/music.png";
+import Thriller from "../../assets/thriller.png";
+import Westren from "../../assets/western.png";
 const Category = () => {
   const { categoriesList } = useContext(CategoriesContext);
+  const { handleAdd } = useContext(selectedContext);
   console.log(categoriesList);
   const getBackGround = (category) => {
     switch (category) {
       case "Action":
-        return "#FF5209";
+        return { bgColor: "#FF5209", image: Action };
       case "Drama":
-        return "#D7A4FF";
+        return { bgColor: "#D7A4FF", image: Drama };
       case "Romance":
-        return "#148A08";
+        return { bgColor: "#148A08", image: Romance };
       case "Thriller":
-        return "#84C2FF";
+        return { bgColor: "#84C2FF", image: Thriller };
       case "Western":
-        return "#902500";
+        return { bgColor: "#902500", image: Westren };
       case "Horror":
-        return "#7358FF";
+        return { bgColor: "#7358FF", image: Horror };
       case "Fantasy":
-        return "#FF4ADE";
+        return { bgColor: "#FF4ADE", image: Fantasy };
       case "Music":
-        return "#E61E32";
+        return { bgColor: "#E61E32", image: Music };
       case "Fiction":
-        return "#6CD061";
+        return { bgColor: "#6CD061", image: Fiction };
       default:
         return "#fff";
     }
+  };
+
+  const handleSelect = (list) => {
+    handleAdd(list);
   };
   return (
     <div>
@@ -36,12 +50,15 @@ const Category = () => {
           return (
             <div
               key={category.id}
-              style={{ backgroundColor: getBackGround(category.name) }}
+              style={{ backgroundColor: getBackGround(category.name).bgColor }}
+              onClick={() => {
+                handleSelect(category);
+              }}
             >
               <div className={style.movieName}>
                 <p>{category.name}</p>
                 <div>
-                  <img src={Action} alt="" srcset="" />
+                  <img src={getBackGround(category.name).image} alt="" />
                 </div>
               </div>
             </div>
