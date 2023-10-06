@@ -8,7 +8,14 @@ const addItem = (selectedItem, ItemTOAdd) => {
   if (!exist) {
     return [...selectedItem, ItemTOAdd];
   } else {
-    return [...selectedItem];
+    console.log("selectedItem", selectedItem);
+    // const data = { ...ItemTOAdd, flag: false };
+    console.log("Itemtoadd", ItemTOAdd);
+    const newSelectedItem = selectedItem.filter((item) => {
+      return item.id !== ItemTOAdd.id;
+    });
+
+    return [...newSelectedItem];
   }
 };
 

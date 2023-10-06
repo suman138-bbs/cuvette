@@ -3,4 +3,35 @@
     color: #fff;
     height: 100vh;
     width: 100vw;
+    font-family: Roboto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.dashbordContainer >div{
+    border-radius: 1em;
+}
+
+.first{
+  
+  
+}
+
+.second{
+   grid-row: span 2;
+}
+.third{
+   grid-row: span 3;
+}
+
+.fourth{
+   
+    grid-column: span 2;
+}
+
+.fifth{
+    grid-row-start: 2;
 }

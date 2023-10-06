@@ -9,11 +9,11 @@ import { SelectedProvider } from "./context/selectedItem.context.jsx";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
-      <CategoriesProvider>
-        <SelectedProvider>
+      <SelectedProvider>
+        <CategoriesProvider>
           <App />
-        </SelectedProvider>
-      </CategoriesProvider>
+        </CategoriesProvider>
+      </SelectedProvider>
     </BrowserRouter>
   </React.StrictMode>
 );

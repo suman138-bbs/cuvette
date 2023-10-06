@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react"; // Import useContext from React
+import React, { useContext, useEffect, useState } from "react"; // Import useContext from React
 import { CategoriesContext } from "../../context/categories.context";
 import { selectedContext } from "../../context/selectedItem.context";
 import style from "./category.module.css";
@@ -12,9 +12,9 @@ import Music from "../../assets/music.png";
 import Thriller from "../../assets/thriller.png";
 import Westren from "../../assets/western.png";
 const Category = ({ handleNextPage }) => {
-  const { categoriesList, setNewCategoryItem } = useContext(CategoriesContext);
+  const { categoriesList, setNewCategoryItem, setNewByRemove } =
+    useContext(CategoriesContext);
   const { handleAdd } = useContext(selectedContext);
-
   const getBackGround = (category) => {
     switch (category) {
       case "Action":
@@ -47,7 +47,7 @@ const Category = ({ handleNextPage }) => {
   const setNewCategory = (category) => {
     setNewCategoryItem(category);
   };
-
+  const [flag, setFlag] = useState(false);
   return (
     <div className={style.categoryAndBtn}>
       <div className={style.categoryContainer}>
@@ -61,8 +61,9 @@ const Category = ({ handleNextPage }) => {
               onClick={() => {
                 setNewCategory(category);
                 handleSelect(category);
+                setFlag(!flag);
               }}
-              className={category.flag ? style.setBorder : ""}
+              className={category.flag ? style.setBorder : style.removeBorder}
             >
               <div className={style.movieName}>
                 <p>{category.name}</p>
