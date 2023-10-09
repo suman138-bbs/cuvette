@@ -12,7 +12,7 @@ const Profile = () => {
       <div className={style.userData}>
         <p>{userInfo.name}</p>
         <p>{userInfo.email}</p>
-        <p>{userInfo.username}</p>
+        <h1>{userInfo.username}</h1>
       </div>
       <div className={style.categoryList}>
         {selectedMovie.map((category) => {

@@ -1,6 +1,8 @@
 import React from "react";
 import style from "./dashbord.module.css";
 import Profile from "../../components/profile/profile.component";
+import Weather from "../../components/weather/weather.component";
+import News from "../../components/news/news.component";
 const Dashbord = () => {
   return (
     <div className={style.dashbordContainer}>
@@ -11,13 +13,13 @@ const Dashbord = () => {
         notes
       </div>
       <div style={{ backgroundColor: "blue" }} className={style.third}>
-        news
+        <News />
       </div>
       <div style={{ backgroundColor: "purple" }} className={style.fourth}>
         timer
       </div>
-      <div style={{ backgroundColor: "orange" }} className={style.fifth}>
-        weather
+      <div className={style.fifth}>
+        <Weather />
       </div>
     </div>
   );

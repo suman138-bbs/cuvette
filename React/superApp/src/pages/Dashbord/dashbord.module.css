@@ -19,10 +19,13 @@
   
   background-color: #5746EA;
   padding: 1em;
+  height: 13em;
 }
 
 .second{
    grid-row: span 2;
+   height: 23.7em;
+
 }
 .third{
    grid-row: span 3;
@@ -31,8 +34,12 @@
 .fourth{
    
     grid-column: span 2;
+    height: 10em;
+    
 }
 
 .fifth{
     grid-row-start: 2;
+    background-color: #101744;
+        height: 9em;
 }

@@ -20,6 +20,7 @@
 
 .userData >p {
 margin-top: 0.4em;
+font-size: 1.1rem;
 }
 .categoryList >p {
     
@@ -38,5 +39,5 @@ margin-top: 0.4em;
     grid-template-columns: repeat(2,1fr);
     gap: 0.2em;
     height: 4.8em;
-   overflow-y: scroll;
+   overflow-y: auto;
 }
