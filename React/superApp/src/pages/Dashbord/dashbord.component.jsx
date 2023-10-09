@@ -1,14 +1,11 @@
 import React from "react";
 import style from "./dashbord.module.css";
+import Profile from "../../components/profile/profile.component";
 const Dashbord = () => {
   return (
     <div className={style.dashbordContainer}>
-      <div style={{ backgroundColor: "red" }} className={style.first}>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum
-        possimus, fugit rem dolor adipisci amet quibusdam numquam maxime vero
-        distinctio reiciendis modi ipsam voluptate, excepturi molestiae
-        molestias autem inventore nisi tempore recusandae? Illum id mollitia
-        qui, commodi molestiae impedit minus soluta dolores, enim aliquid beatae
+      <div className={style.first}>
+        <Profile />
       </div>
       <div style={{ backgroundColor: "gray" }} className={style.second}>
         notes

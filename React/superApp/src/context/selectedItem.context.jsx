@@ -8,9 +8,6 @@ const addItem = (selectedItem, ItemTOAdd) => {
   if (!exist) {
     return [...selectedItem, ItemTOAdd];
   } else {
-    console.log("selectedItem", selectedItem);
-    // const data = { ...ItemTOAdd, flag: false };
-    console.log("Itemtoadd", ItemTOAdd);
     const newSelectedItem = selectedItem.filter((item) => {
       return item.id !== ItemTOAdd.id;
     });
@@ -21,8 +18,10 @@ const addItem = (selectedItem, ItemTOAdd) => {
 
 const removeSelectedItem = (selectedItem, itemToRemove) => {
   const items = selectedItem.filter((category) => {
+    category = { ...category, flag: false };
     return category.id !== itemToRemove.id;
   });
+
   return [...items];
 };
 

@@ -12,9 +12,9 @@ import Music from "../../assets/music.png";
 import Thriller from "../../assets/thriller.png";
 import Westren from "../../assets/western.png";
 const Category = ({ handleNextPage }) => {
-  const { categoriesList, setNewCategoryItem, setNewByRemove } =
+  const { categoriesList, setNewCategoryItem, setCategoriesList } =
     useContext(CategoriesContext);
-  const { handleAdd } = useContext(selectedContext);
+  const { handleAdd, selectedItem } = useContext(selectedContext);
   const getBackGround = (category) => {
     switch (category) {
       case "Action":
@@ -47,7 +47,23 @@ const Category = ({ handleNextPage }) => {
   const setNewCategory = (category) => {
     setNewCategoryItem(category);
   };
-  const [flag, setFlag] = useState(false);
+
+  const setNewData = (category) => {
+    const newData = selectedItem.find((cate) => {
+      return cate.id === category.id;
+    });
+
+    if (newData) {
+      const data = categoriesList.map((newcate) => {
+        return category.id === newcate.id
+          ? { ...newcate, flag: false }
+          : { ...newcate };
+      });
+
+      setCategoriesList(data);
+    }
+  };
+
   return (
     <div className={style.categoryAndBtn}>
       <div className={style.categoryContainer}>
@@ -61,7 +77,7 @@ const Category = ({ handleNextPage }) => {
               onClick={() => {
                 setNewCategory(category);
                 handleSelect(category);
-                setFlag(!flag);
+                setNewData(category);
               }}
               className={category.flag ? style.setBorder : style.removeBorder}
             >

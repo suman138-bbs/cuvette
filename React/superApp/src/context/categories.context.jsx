@@ -48,7 +48,12 @@ export const CategoriesProvider = ({ children }) => {
     setCategoriesList(val);
   };
 
-  const value = { categoriesList, setNewCategoryItem, setNewByRemove };
+  const value = {
+    categoriesList,
+    setNewCategoryItem,
+    setNewByRemove,
+    setCategoriesList,
+  };
 
   return (
     <CategoriesContext.Provider value={value}>
