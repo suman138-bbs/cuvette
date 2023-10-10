@@ -1,5 +1,5 @@
 import style from "./news.module.css";
-import { weatherApiKey } from "../../utils/apikey";
+import { newsApiKey } from "../../utils/apikey";
 import { useEffect, useState } from "react";
 
 const News = () => {
@@ -7,20 +7,33 @@ const News = () => {
   useEffect(() => {
     const getNews = async () => {
       const response = await fetch(
-        `https://newsapi.org/v2/top-headlines?country=us&apiKey=${weatherApiKey}`
+        `https://newsapi.org/v2/top-headlines?country=us&apiKey=${newsApiKey}`
       );
       const data = await response.json();
-      console.log(data?.articles[0]?.title);
-      setNews(data?.articles[0]);
+      console.log(data);
+      setNews(data?.articles[4]);
     };
     getNews();
   }, []);
+  console.log(news.urlToImage);
+  const containerStyle = {
+    backgroundImage: `url(${news.urlToImage})`,
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    height: "20em",
+    width: "27em",
+    borderRadius: "1em",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "end",
+  };
   return (
-    <div>
-      <div>
-        <h1>{news?.title}</h1>
+    <div style={{}} className={style.newsContainer}>
+      <div style={containerStyle}>
+        <h3>{news?.title}</h3>
+        <h4>{}</h4>
       </div>
-      <div>
+      <div className={style.description}>
         <p>{news?.description}</p>
       </div>
     </div>

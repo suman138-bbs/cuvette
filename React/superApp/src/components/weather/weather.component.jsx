@@ -32,7 +32,7 @@ const Weather = () => {
         `http://api.weatherapi.com/v1/forecast.json?key=${weatherApiKey}&q=Maharajganj`
       );
       const data = await response.json();
-      console.log(data.current);
+      // console.log(data);
       setWeatherData(data.current);
     };
     getWeatherData();
