@@ -10,12 +10,12 @@ const News = () => {
         `https://newsapi.org/v2/top-headlines?country=us&apiKey=${newsApiKey}`
       );
       const data = await response.json();
-      console.log(data);
-      setNews(data?.articles[4]);
+      console.log("News", data);
+      setNews(data?.articles[0]);
     };
     getNews();
   }, []);
-  console.log(news.urlToImage);
+  // console.log(news.urlToImage);
   const containerStyle = {
     backgroundImage: `url(${news.urlToImage})`,
     backgroundSize: "cover",

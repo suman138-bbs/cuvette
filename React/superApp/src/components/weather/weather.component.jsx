@@ -10,29 +10,28 @@ import Pressure from "../../assets/Pressure.svg";
 import Wind from "../../assets/Wind.svg";
 import Humidity from "../../assets/Humidity.svg";
 const Weather = () => {
-  const currentDateAndTime = new Date();
+  const [currentDateAndTime, setCurrent] = useState(new Date());
 
-  const year = currentDateAndTime.getFullYear();
-  const month = currentDateAndTime.getMonth();
-  const day = currentDateAndTime.getDate();
+  const [year, setYear] = useState(currentDateAndTime.getFullYear());
+  const [month, setMonth] = useState(currentDateAndTime.getMonth());
+  const [day, setDay] = useState(currentDateAndTime.getDate());
   const [hours, setHours] = useState(currentDateAndTime.getHours());
-  const minutes = currentDateAndTime.getMinutes();
-  const seconds = currentDateAndTime.getSeconds();
+  const [minutes, setMinutes] = useState(currentDateAndTime.getMinutes());
   const [ampm, setAmPm] = useState("AM");
-  if (hours >= 12) {
-    setAmPm("PM");
-    if (hours > 12) {
-      setHours(hours - 12);
-    }
-  }
+
   const [weatherData, setWeatherData] = useState([]);
   useEffect(() => {
+    if (hours >= 12) {
+      setAmPm("PM");
+      if (hours > 12) {
+        setHours(hours - 12);
+      }
+    }
     const getWeatherData = async () => {
       const response = await fetch(
         `http://api.weatherapi.com/v1/forecast.json?key=${weatherApiKey}&q=Maharajganj`
       );
       const data = await response.json();
-      // console.log(data);
       setWeatherData(data.current);
     };
     getWeatherData();
@@ -53,6 +52,8 @@ const Weather = () => {
         return PatiallyCloud;
       case "sunny":
         return Sunny;
+      default:
+        return Sunny;
     }
   };
   console.log(weatherData);
@@ -70,7 +71,7 @@ const Weather = () => {
         <div className={style.weatherImageContainer}>
           <div>
             <img
-              src={setWeatherIcon(setImageString(weatherData.condition?.text))}
+              src={setWeatherIcon(setImageString("Sunny"))}
               alt=""
               srcset=""
             />
