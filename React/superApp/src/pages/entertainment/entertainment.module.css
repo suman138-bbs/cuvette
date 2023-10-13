@@ -1,0 +1,23 @@
+.entertainContainer{
+    background:  #000;
+    height: 100vh;
+    width: 100vw;
+    color: #fff;
+    font-family: Roboto;
+    padding: 2em;
+}
+
+.headerContainer{
+    display: flex;
+    justify-content: space-between;
+}
+.headerContainer p{
+    color: #72DB73;
+    font-size: 1.8rem;
+    font-family: Single Day;
+}
+
+.heroConatiner p{
+     font-size: 1.5rem;
+     font-weight: 600;
+}

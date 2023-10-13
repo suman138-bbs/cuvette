@@ -11,11 +11,11 @@ const News = () => {
       );
       const data = await response.json();
       console.log("News", data);
-      setNews(data?.articles[0]);
+      setNews(data?.articles[2]);
     };
     getNews();
   }, []);
-  // console.log(news.urlToImage);
+  console.log(news.urlToImage);
   const containerStyle = {
     backgroundImage: `url(${news.urlToImage})`,
     backgroundSize: "cover",
