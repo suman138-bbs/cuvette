@@ -1,13 +1,17 @@
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
 import style from "./count.module.css";
 import { useEffect, useState } from "react";
-
+import Over from "../../assets/Over.mp3";
 const CountDown = ({ timerVal }) => {
   const [timer, setTimer] = useState(0);
   useEffect(() => {
     setTimer(timerVal);
   }, [timerVal]);
-  console.log("Timer", timer);
+
+  const playOver = () => {
+    new Audio(Over).play();
+  };
+
   return (
     <div className={style.CountDownContainer}>
       <div className={style.content}>
@@ -20,6 +24,7 @@ const CountDown = ({ timerVal }) => {
           strokeWidth={4}
           trailColor={"#000"}
           onComplete={() => {
+            playOver();
             console.log("Hello From Timer");
           }}
         >

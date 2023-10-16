@@ -12,8 +12,7 @@ const Note = () => {
     <div className={style.noteContainer}>
       <h2>All notes</h2>
       <div className={style.inputContainer}>
-        <input
-          type="text"
+        <textarea
           value={note}
           onChange={(e) => {
             handleChange(e);

@@ -2,11 +2,13 @@ import { useState, useEffect } from "react";
 import style from "./entertainment.module.css";
 import Rounded from "../../assets/Rounded.png";
 import { Link } from "react-router-dom";
+import axios from "axios";
 const Entertainment = () => {
   const [selectedItem, setSelectedItem] = useState([]);
 
   useEffect(() => {
     setSelectedItem(JSON.parse(localStorage.getItem("selectedItem")));
+
     const getData = async () => {
       const url =
         "https://unogs-unogs-v1.p.rapidapi.com/search/titles?order_by=date&type=movie";
@@ -29,7 +31,7 @@ const Entertainment = () => {
     };
     getData();
   }, []);
-
+  console.log(selectedItem);
   return (
     <div className={style.entertainContainer}>
       <div className={style.headerContainer}>

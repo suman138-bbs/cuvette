@@ -57,6 +57,7 @@ const Weather = () => {
     }
   };
   console.log(weatherData);
+  console.log(weatherData?.condition?.text);
   return (
     <div>
       <div className={style.dataTimeContainer}>
@@ -69,9 +70,9 @@ const Weather = () => {
       </div>
       <div className={style.rootWeatherContainer}>
         <div className={style.weatherImageContainer}>
-          <div>
+          <div className={style.iconContainer}>
             <img
-              src={setWeatherIcon(setImageString("Sunny"))}
+              src={setWeatherIcon(setImageString(weatherData?.condition?.text))}
               alt=""
               srcset=""
             />

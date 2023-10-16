@@ -11,17 +11,19 @@
      font-weight: 900;
 }
 
-.noteContainer input{
+.noteContainer textarea{
     background-color: transparent;
     color: #000;
-        font-weight: 500;
-    width: 26em;
-}
-.inputContainer input:focus{
-        color: #000;
-}
-
-.inputContainer{
+    font-weight: 500;
+    width: 20em;
+    border: none;
+    overflow: hidden;
+    height: 15em;
     overflow-y: auto;
+    font-size: 1.09rem;
+   font-family: Roboto;
+}
+.inputContainer textarea:focus{
+        color: #000;
 }
 
