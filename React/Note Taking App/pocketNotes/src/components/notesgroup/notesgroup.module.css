@@ -1,6 +1,34 @@
 .notesGroupContainer{
     width: 30vw;
     height: 100vh;
+    padding: 10%;
+    
+}
+
+.notesGroupContainer >h2{
+    font-size: 1.5rem;
+    
+}
+
+.createBtn{
+    /* display: flex; */
+    /* gap: 1%; */
+}
+.createBtn >span{
+    font-size: 1rem;
+    padding: 0.2em;
+    font-weight: 900;
+    letter-spacing: 1px;
+    
+}
+
+.createBtn {
+    border: none;
+    color: #fff;
+    padding: 0.3em 1em;
+    background-color: #000;
+    border-radius: 1em;
+    cursor: pointer;
 }
 .heading{
 

@@ -1,5 +1,9 @@
 .HeroContainer{
     display: flex;
+    position: relative;
+    
+    
+
 }
 @media screen and (max-width:1000px){
 
@@ -8,4 +12,26 @@
    .Notes{
     display: none;
    }
+}
+
+
+.groupInput{
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    
+    z-index: 0;
+}
+
+.makeoverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    /* Here, the last value (0.7) defines the opacity (alpha channel) of the overlay. */
+    z-index: 100;
+    /* transition: opacity 0.3s ease-in-out; */
+    /* This ensures that the overlay appears above other content. */
 }
