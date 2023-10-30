@@ -1,21 +1,51 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 
 export const NotesContext = createContext({
-  createGroup: false,
-  handleCreateGroup: () => {},
+  createNote: false,
+  handleCreateNote: () => {},
   handleNoteName: () => {},
 });
 
 export const NotesProvider = ({ children }) => {
-  const [createGroup, setCreateGroup] = useState(false);
+  const [createNote, setCreateNote] = useState(false);
+  const [NotesNameList, setNotesNameList] = useState([]);
 
-  const handleCreateGroup = () => {
-    setCreateGroup(!createGroup);
+  const [initialDataLoaded, setInitialDataLoaded] = useState(false);
+
+  useEffect(() => {
+    const storedNotesNameList = JSON.parse(
+      localStorage.getItem("NotesNameList")
+    );
+    if (storedNotesNameList) {
+      setNotesNameList(storedNotesNameList);
+    }
+    setInitialDataLoaded(true);
+  }, []);
+
+  const handleCreateNote = () => {
+    setCreateNote(!createNote);
   };
-  const handleNoteName = (name) => {
-    console.log(name);
+
+  const handleNoteName = ({ name, color }) => {
+    const noteIcon = name[0] + name[Math.floor(Math.random() * name.length)];
+    const newNote = { name, color, noteIcon };
+    setNotesNameList([...NotesNameList, newNote]);
   };
-  const value = { createGroup, handleCreateGroup, handleNoteName };
+
+  useEffect(() => {
+    if (initialDataLoaded) {
+      localStorage.setItem("NotesNameList", JSON.stringify(NotesNameList));
+    }
+  }, [NotesNameList, initialDataLoaded]);
+
+  const value = {
+    createNote,
+    handleCreateNote,
+    handleNoteName,
+    NotesNameList,
+  };
+
+  console.log(NotesNameList);
   return (
     <NotesContext.Provider value={value}>{children}</NotesContext.Provider>
   );

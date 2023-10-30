@@ -2,7 +2,7 @@ import { useState, useContext } from "react";
 import style from "./notesgroup.module.css";
 import { NotesContext } from "../../contexts/notes.context";
 const NotesGroup = () => {
-  const { handleCreateGroup } = useContext(NotesContext);
+  const { handleCreateNote } = useContext(NotesContext);
   return (
     <div className={style.notesGroupContainer}>
       <h2 className="heading">Pocket Notes</h2>
@@ -11,7 +11,7 @@ const NotesGroup = () => {
           <button
             className={style.createBtn}
             onClick={() => {
-              handleCreateGroup();
+              handleCreateNote();
             }}
           >
             <span>+</span>
