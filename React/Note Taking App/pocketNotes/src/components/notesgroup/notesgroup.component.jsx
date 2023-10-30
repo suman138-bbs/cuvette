@@ -1,9 +1,8 @@
+import { useState, useContext } from "react";
 import style from "./notesgroup.module.css";
+import { NotesContext } from "../../contexts/notes.context";
 const NotesGroup = () => {
-  console.log(window.innerHeight);
-  console.log(window.innerWidth);
-
-  const handleCreateGroup = () => {};
+  const { handleCreateGroup } = useContext(NotesContext);
   return (
     <div className={style.notesGroupContainer}>
       <h2 className="heading">Pocket Notes</h2>

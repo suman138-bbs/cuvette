@@ -1,9 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import NotesGroup from "../../components/notesgroup/notesgroup.component";
 import Notes from "../../components/notes/notes.component";
 import style from "./Hero.module.css";
 import GroupInput from "../../components/groupInput/groupInput.component";
+import { NotesContext } from "../../contexts/notes.context";
 const Hero = () => {
+  const { createGroup } = useContext(NotesContext);
   useEffect(() => {
     const handleResize = () => {
       console.log("Resizing");
@@ -25,11 +27,13 @@ const Hero = () => {
       <div className={style.Notes}>
         <Notes />
       </div>
-      <div className={style.makeoverlay}>
-        <div className={style.groupInput}>
-          <GroupInput />
+      {createGroup && (
+        <div className={style.makeoverlay}>
+          <div className={style.groupInput}>
+            <GroupInput />
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };
