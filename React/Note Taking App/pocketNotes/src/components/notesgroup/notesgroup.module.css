@@ -1,7 +1,11 @@
 .notesGroupContainer{
     width: 30vw;
     height: 100vh;
-    padding: 10%;
+    padding-left: 10%;
+    padding-top: 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 3%;
     
 }
 
@@ -32,4 +36,48 @@
 }
 .heading{
 
+}
+
+.notesGroupContainer >div{
+    padding-left: 2%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 100%;
+}
+
+.NoteIconName{
+    display: flex;
+    align-items: center;
+    gap: 3%;
+    cursor: pointer;
+    background-color: #F7ECDC;
+    padding: 3% 7%;
+    width: 100%;
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+}
+
+.NoteIconName >h3{
+    color: #fff;
+      height: 2em;
+      width: 2em;
+      text-align: center;
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+
+      
+}
+
+.NoteIconName >h5{
+    letter-spacing: 1px;
+}
+.NoteIconNameContainer{
+    display: flex;
+    flex-direction: column;
+    /* gap: 1em; */
+    width: 100%;
 }

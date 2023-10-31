@@ -40,7 +40,7 @@ const GroupInput = () => {
                 }}
               />
             </div>
-            <span>{error.nameError}</span>
+            <span className="error">{error.nameError}</span>
             <div className={style.colorContainer}>
               <div>
                 <h3>Choose colour</h3>
@@ -84,7 +84,7 @@ const GroupInput = () => {
                 ></button>
               </div>
             </div>
-            <span>{error.colorError}</span>
+            <span className="error">{error.colorError}</span>
           </div>
           <div className={style.createBtn}>
             <button

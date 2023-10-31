@@ -2,5 +2,26 @@
     background: #F7ECDC;
     width: 70vw;
     height: 100vh;
+    padding: 2%;
     
+}
+
+.NoteIcon>h3 {
+    color: #fff;
+    height: 2em;
+    width: 2em;
+    text-align: center;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+
+
+}
+
+.NoteIcon{
+    display: flex;
+    align-items: center;
+    gap: 2%;
 }

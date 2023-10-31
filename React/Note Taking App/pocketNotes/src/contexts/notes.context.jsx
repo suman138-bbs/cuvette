@@ -11,6 +11,7 @@ export const NotesProvider = ({ children }) => {
   const [NotesNameList, setNotesNameList] = useState([]);
 
   const [initialDataLoaded, setInitialDataLoaded] = useState(false);
+  const [selectedIcon, setSelectedIcon] = useState({});
 
   useEffect(() => {
     const storedNotesNameList = JSON.parse(
@@ -27,8 +28,10 @@ export const NotesProvider = ({ children }) => {
   };
 
   const handleNoteName = ({ name, color }) => {
+    let id = NotesNameList.length + 1;
     const noteIcon = name[0] + name[Math.floor(Math.random() * name.length)];
-    const newNote = { name, color, noteIcon };
+    const newNote = { id, name, color, noteIcon };
+
     setNotesNameList([...NotesNameList, newNote]);
   };
 
@@ -43,9 +46,11 @@ export const NotesProvider = ({ children }) => {
     handleCreateNote,
     handleNoteName,
     NotesNameList,
+    setSelectedIcon,
+    selectedIcon,
   };
 
-  console.log(NotesNameList);
+  console.log(selectedIcon);
   return (
     <NotesContext.Provider value={value}>{children}</NotesContext.Provider>
   );

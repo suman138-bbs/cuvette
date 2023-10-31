@@ -9,3 +9,7 @@ box-sizing: border-box;
 body{
     color: #000;
 }
+
+.error{
+    color: red;
+}
